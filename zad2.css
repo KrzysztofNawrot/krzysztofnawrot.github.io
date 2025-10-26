@@ -4,27 +4,27 @@
   flex-direction: column;
   align-items: center;
 }
-table {
-  max-width: 1000px;
-  margin: 20px 50px 0px 50px;
-  padding: 0;
-}
-th {
-  background-color: white;
-  padding: 20px;
-  font-weight: lighter;
-  font-size: large;
-  outline: 2px solid rgba(0, 0, 0, 0.171);
-  position: relative;
-}
 .title {
   text-align: center;
-  position:static;
-  bottom: 0;
-  right: auto;
   font-size: large;
 }
 img {
+  margin:auto;
   width: 200px;
+  border: solid rgba(0, 0, 0, 0.171) 1px ;
 }
-
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  gap: 5px;
+  background-color: white;
+  border: solid rgba(0, 0, 0, 0.171) 1px ;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
