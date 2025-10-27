@@ -1,26 +1,8 @@
 .main-container {
   margin: 50px 50px 0px 50px;
   display: flex;
-  flex-direction: column;
 }
-
-.row {
-  max-width: 1000px;
-  margin: 20px 50px 0px 50px;
-  padding: 0;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+p {
+  background-color: rgb(100, 100, 100) ;
+  padding: 15px;
 }
-
-.cell {
-  display: inline-block;
-  background-color: white;
-  padding: 20px;
-  text-align: left;
-  font-weight: lighter  ;
-  font-size: large;
-  border-right: 1px solid rgba(0, 0, 0, 0.171);
-}
-th:last-child {
-  border: 0px;
-}
-
