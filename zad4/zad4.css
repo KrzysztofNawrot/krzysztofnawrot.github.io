@@ -29,6 +29,7 @@ body {
   position: relative;
 }
 .text {
+  overflow-x:hidden;
   padding-right: 10px;
   margin-left: auto;
   margin-bottom: auto;
