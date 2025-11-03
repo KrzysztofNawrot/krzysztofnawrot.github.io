@@ -16,6 +16,12 @@ resetButton.addEventListener("click", handleReset)
 let displayedText = "";
 let currentNumberString = "";
 let tokens = [];
+function handleError() {
+  tokens = [];
+  display.textContent = "Err";
+  displayedText = ""
+  currentNumberString = "";
+}
 function handleReset() {
   tokens = [];
   display.textContent = "0";
@@ -56,37 +62,44 @@ function updateDisplay() {
 }
 function handleEqualsButtonClick(e) {
   if (currentNumberString !== "") tokens.push(Number(currentNumberString));
-  const result = evaluateTokens(tokens);
+  const result = calculate(tokens);
   displayedText = "";
   currentNumberString = result.toString();
   updateDisplay();
   tokens = [];
 } 
-function evaluateTokens(toks) {
-  if (!toks || toks.length === 0) return 0
-  let out = []
-  let i = 0
+function calculate(toks) {
+  if (!toks || toks.length === 0) return 0;
+  let out = [];
+  let i = 0;
   while (i < toks.length) {
-    let t = toks[i]
+    let t = toks[i];
     if (t === "×" || t === "÷") {
-      let a = out.pop()
-      let b = toks[i + 1]
-      out.push(t === "×" ? a * b : a / b)
-      i += 2
+      let a = out.pop();
+      let b = toks[i + 1];
+      if (t === "×") {
+        out.push(a * b);
+      } else if (b != 0) {
+        out.push(a / b);
+      } else {
+        handleError();
+        return;
+      }
+      i += 2;
     } else {
-      out.push(t)
-      i++
+      out.push(t);
+      i++;
     }
   }
-  let r = out[0]
-  i = 1
+  let r = out[0];
+  i = 1;
   while (i < out.length) {
-    let op = out[i]
-    let n = out[i + 1]
-    if (op === "+") r += n
-    else if (op === "-") r -= n
-    i += 2
+    let op = out[i];
+    let n = out[i + 1];
+    if (op === "+") r += n;
+    else if (op === "-") r -= n;
+    i += 2;
   }
-  return r
+  return r;
 }
 
