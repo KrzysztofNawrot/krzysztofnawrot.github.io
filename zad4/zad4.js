@@ -61,7 +61,13 @@ function updateDisplay() {
   display.textContent = displayedText + currentNumberString
 }
 function handleEqualsButtonClick(e) {
-  if (currentNumberString !== "") tokens.push(Number(currentNumberString));
+  if (currentNumberString !== "") {
+    tokens.push(Number(currentNumberString));
+  } else {
+    handleError();
+    return;
+  }
+    
   const result = calculate(tokens);
   displayedText = "";
   currentNumberString = result.toString();
