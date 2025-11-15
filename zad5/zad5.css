@@ -1,0 +1,100 @@
+.faktura-image {
+  position: absolute;
+    z-index: -1;
+}
+.fields-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.meta-row {
+  margin-top: 40px;
+  margin-left: 500px;
+  display: flex;
+
+}
+.nr {
+  position: absolute;
+  left: 510px;
+  top: 132px;
+  font-size: x-large;
+}
+
+.city {
+  font-size: large;
+  position: absolute;
+  left: 830px;
+  top: 43px;
+}
+.issue-date-1 {
+  font-size: large;
+  position: absolute;
+  left: 915px;
+  top: 90px;
+}
+.issue-date-2 {
+  font-size: large;
+  position: absolute;
+  left: 1120px;
+  top: 91px;
+}
+.finish-date-1 {
+  font-size: large;
+  position: absolute;
+  left: 975px;
+  top: 139px;
+}
+.finish-date-2 {
+  font-size: large;
+  position: absolute;
+  left: 1120px;
+  top: 139px;
+}
+.seller-name {
+  font-size: large;
+  position: absolute;
+  left: 220px;
+  top: 197px;
+}
+.seller-address-1 {
+  font-size: large;
+  position: absolute;
+  left: 120px;
+  top: 234px;
+}
+.seller-address-2 {
+  font-size: large;
+  position: absolute;
+  left: 120px;
+  top: 270px;
+}
+.seller-nip {
+  font-size: large;
+  position: absolute;
+  left: 315px;
+  top: 305px;
+}
+.buyer-name {
+  font-size: large;
+  position: absolute;
+  left: 730px;
+  top: 197px;
+}
+.buyer-address-1 {
+  font-size: large;
+  position: absolute;
+  left: 655px;
+  top: 234px;
+}
+.buyer-address-2 {
+  font-size: large;
+  position: absolute;
+  left: 655px;
+  top: 270px;
+}
+.buyer-nip {
+  font-size: large;
+  position: absolute;
+  left: 850px;
+  top: 305px;
+}
