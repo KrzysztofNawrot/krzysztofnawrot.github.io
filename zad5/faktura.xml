@@ -2,47 +2,30 @@
 <Invoice>
   <Number>21441412421</Number>
   <City>Kielce</City>
-
   <IssueDate>
     <Day>4 września</Day>
     <Year>23</Year>
   </IssueDate>
-
   <FinishDate>
     <Day>4 września</Day>
     <Year>23</Year>
   </FinishDate>
-
   <Seller>
     <Name>Krzysztof Nawrot</Name>
     <Address1>Kielce, aleja Niepodległości 4/5</Address1>
     <Address2>25-757</Address2>
     <Nip>21441412421</Nip>
   </Seller>
-
   <Buyer>
     <Name>Krzysztof Nawrot</Name>
     <Address1>Kielce, aleja Niepodległości 4/5</Address1>
     <Address2>25-757</Address2>
     <Nip>21441412421</Nip>
   </Buyer>
-
-  <TotalPrice>5000.00</TotalPrice>
-  <TotalPriceWord>Pięć tysięcy złotych</TotalPriceWord>
   <Paid>1000.00</Paid>
-  <Remaining>4000.00</Remaining>
   <Receiver>Krzysztof Nawrot</Receiver>
   <Issuer>Krzysztof Nawrot</Issuer>
-
   <VatStake>23</VatStake>
-  <TotalNoTax>4065</TotalNoTax>
-  <VatTotal>935</VatTotal>
-  <TotalWithTax>5000</TotalWithTax>
-
-  <TotalNoTaxGr>00</TotalNoTaxGr>
-  <VatTotalGr>00</VatTotalGr>
-  <TotalWithTaxGr>00</TotalWithTaxGr>
-
   <Items>
     <Item>
       <Id>1</Id>
@@ -55,7 +38,6 @@
       <ItemPrice>1798</ItemPrice>
       <ItemPriceGr>00</ItemPriceGr>
     </Item>
-
     <Item>
       <Id>2</Id>
       <Name>Kabel USB</Name>
@@ -67,7 +49,6 @@
       <ItemPrice>89</ItemPrice>
       <ItemPriceGr>97</ItemPriceGr>
     </Item>
-
     <Item>
       <Id>3</Id>
       <Name>Klawiatura mechaniczna</Name>
@@ -79,7 +60,6 @@
       <ItemPrice>350</ItemPrice>
       <ItemPriceGr>00</ItemPriceGr>
     </Item>
-
     <Item>
       <Id>4</Id>
       <Name>Mysz bezprzewodowa</Name>
@@ -91,7 +71,6 @@
       <ItemPrice>259</ItemPrice>
       <ItemPriceGr>00</ItemPriceGr>
     </Item>
-
     <Item>
       <Id>5</Id>
       <Name>Stojak na monitor</Name>

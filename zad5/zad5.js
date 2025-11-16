@@ -19,31 +19,35 @@ function fill(xml) {
   document.getElementById("buyer-address-1").textContent = xml.querySelector("Buyer Address1").textContent;
   document.getElementById("buyer-address-2").textContent = xml.querySelector("Buyer Address2").textContent;
   document.getElementById("buyer-nip").textContent = xml.querySelector("Buyer Nip").textContent;
-  document.getElementById("total-price").textContent = xml.querySelector("TotalPrice").textContent;
   document.getElementById("total-price-word").textContent = xml.querySelector("TotalPriceWord").textContent;
   document.getElementById("paid").textContent = xml.querySelector("Paid").textContent;
-  document.getElementById("remaining").textContent = xml.querySelector("Remaining").textContent;
   document.getElementById("receiver").textContent = xml.querySelector("Receiver").textContent;
   document.getElementById("issuer").textContent = xml.querySelector("Issuer").textContent;
   document.getElementById("vat-stake").textContent = xml.querySelector("VatStake").textContent;
-  document.getElementById("total-no-tax").textContent = xml.querySelector("TotalNoTax").textContent;
-  document.getElementById("vat-total").textContent = xml.querySelector("VatTotal").textContent;
-  document.getElementById("total-with-tax").textContent = xml.querySelector("TotalWithTax").textContent;
-  document.getElementById("total-no-tax-gr").textContent = xml.querySelector("TotalNoTaxGr").textContent;
-  document.getElementById("vat-total-gr").textContent = xml.querySelector("VatTotalGr").textContent;
-  document.getElementById("total-with-tax-gr").textContent = xml.querySelector("TotalWithTaxGr").textContent;
+
 }
 
 function fillItems(xml) {
   const container = document.querySelector(".items");
   const items = xml.querySelectorAll("Items Item");
   let index = 1;
+  let totalNoTax = 0;
+  let totalVat = 0;
+  let totalWithTax = 0;
+  const vatStake = parseFloat(xml.querySelector("VatStake").textContent) / 100;
 
   items.forEach(item => {
     const div = document.createElement("div");
     div.className = "item";
     div.id = "item-" + index;
+    const amount = parseFloat(item.querySelector("Amount").textContent)
+    const net = amount * parseFloat(item.querySelector("SingleItemPrice").textContent) + parseFloat(item.querySelector("SingleItemPriceGr").textContent) / 100;
+    const vatAmount = net * vatStake;
+    const gross = net + vatAmount;
 
+    totalNoTax += net;
+    totalVat += vatAmount;
+    totalWithTax += gross;
     const fields = [
       ["id", "Id"],
       ["name", "Name"],
@@ -67,9 +71,22 @@ function fillItems(xml) {
     container.appendChild(div);
     index++;
   });
+  calculateSummary(xml, totalNoTax, totalVat, totalWithTax);
 }
 
 loadFile().then(xml => {
   fill(xml);
   fillItems(xml);
 });
+function calculateSummary(xml, totalNoTax, totalVat, totalWithTax) {
+  document.getElementById("total-no-tax").textContent = Math.floor(totalNoTax);
+  document.getElementById("total-no-tax-gr").textContent = Math.round((totalNoTax % 1) * 100);
+  document.getElementById("vat-total").textContent = Math.floor(totalVat);
+  document.getElementById("vat-total-gr").textContent = Math.round((totalVat % 1) * 100);
+  document.getElementById("total-with-tax").textContent = Math.floor(totalWithTax);
+  document.getElementById("total-with-tax-gr").textContent = Math.round((totalWithTax % 1) * 100);
+  let total = (Math.floor(totalWithTax) + (Math.round((totalWithTax % 1) * 100) / 100)).toFixed(2);
+  document.getElementById("total-price").textContent = total
+  document.getElementById("remaining").textContent = total - parseFloat(xml.querySelector("Paid").textContent);
+
+}
