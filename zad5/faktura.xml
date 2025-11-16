@@ -35,9 +35,9 @@
   <Issuer>Krzysztof Nawrot</Issuer>
 
   <VatStake>23</VatStake>
-  <TotalNoTax>4065.00</TotalNoTax>
-  <VatTotal>935.00</VatTotal>
-  <TotalWithTax>5000.00</TotalWithTax>
+  <TotalNoTax>4065</TotalNoTax>
+  <VatTotal>935</VatTotal>
+  <TotalWithTax>5000</TotalWithTax>
 
   <TotalNoTaxGr>00</TotalNoTaxGr>
   <VatTotalGr>00</VatTotalGr>
