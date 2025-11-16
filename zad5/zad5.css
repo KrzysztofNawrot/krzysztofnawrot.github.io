@@ -98,3 +98,147 @@
   left: 850px;
   top: 305px;
 }
+.items {
+  font-size: large;
+  position: absolute;
+  left: 150px;
+  top: 470px;
+  gap: 33px;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  position: relative;
+}
+.id {
+  font-size: large;
+  position: absolute;
+  left: -38px;
+}
+.name {
+  font-size: large;
+  position: absolute;
+  text-wrap: nowrap;
+}
+.unit {
+  font-size: large;
+  position: absolute;
+  left: 530px;
+}
+.amount {
+  font-size: large;
+  position: absolute;
+  left: 588px;
+}
+.single-item-price {
+  font-size: large;
+  position: absolute;
+  left: 698px;
+}
+.single-item-price-gr {
+  font-size: large;
+  position: absolute;
+  left: 808px;
+}
+.item-price-gr {
+  font-size: large;
+  position: absolute;
+  left: 978px;
+}
+.item-price {
+  font-size: large;
+  position: absolute;
+  left: 850px;
+}
+.total-price {
+  font-size: large;
+  position: absolute;
+  top: 866px;
+  left: 305px;
+}
+.total-price-word {
+  word-break:break-all;
+  line-height: 42px;
+  display: inline-block;
+  font-size: large;
+  position: absolute;
+  top: 935px;
+  width: 480px;
+  height: 74px;
+  text-wrap: wrap;
+  left: 115px;
+  overflow-y: hidden;
+}
+.paid {
+  font-size: large;
+  position: absolute;
+  top: 1040px;
+  left: 250px;
+}
+.remaining {
+  font-size: large;
+  position: absolute;
+  top: 1075px;
+  left: 325px;
+}
+.receiver {
+  font-size: large;
+  position: absolute;
+  top: 1075px;
+  left: 625px;
+}
+.issuer {
+  font-size: large;
+  position: absolute;
+  top: 1075px;
+  left: 910px;
+}
+.total-no-tax {
+  font-size: large;
+  position: absolute;
+  top: 865px;
+  left: 1000px;
+}
+.total-with-tax {
+  font-size: large;
+  position: absolute;
+  top: 932px;
+  left: 1000px;
+}
+.vat-stake {
+  font-size: large;
+  position: absolute;
+  top: 888px;
+  left: 785px;
+}
+.vat-total {
+  font-size: large;
+  position: absolute;
+  top: 900px;
+  left: 1000px;
+}
+.tax-free-reason {
+  text-wrap: nowrap;
+  font-size: large;
+  position: absolute;
+  left: 422px;
+}
+.total-no-tax-gr {
+  font-size: large;
+  position: absolute;
+  top: 865px;
+  left: 1130px;
+}
+.total-with-tax-gr {
+  font-size: large;
+  position: absolute;
+  top: 932px;
+  left: 1130px;
+}
+.vat-total-gr {
+  font-size: large;
+  position: absolute;
+  top: 900px;
+  left: 1130px;
+}
