@@ -19,7 +19,6 @@ function fill(xml) {
   document.getElementById("buyer-address-1").textContent = xml.querySelector("Buyer Address1").textContent;
   document.getElementById("buyer-address-2").textContent = xml.querySelector("Buyer Address2").textContent;
   document.getElementById("buyer-nip").textContent = xml.querySelector("Buyer Nip").textContent;
-  document.getElementById("total-price-word").textContent = xml.querySelector("TotalPriceWord").textContent;
   document.getElementById("paid").textContent = xml.querySelector("Paid").textContent;
   document.getElementById("receiver").textContent = xml.querySelector("Receiver").textContent;
   document.getElementById("issuer").textContent = xml.querySelector("Issuer").textContent;
